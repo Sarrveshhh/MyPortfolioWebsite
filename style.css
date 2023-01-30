@@ -2,10 +2,12 @@ body{
     background-color: black;
 }
 
-p{
+.terminal-text{
     color: #ef5b25;
+    display: inline;
 }
 
-pre{
+
+.header-text{
     color: #ef5b25;
 }
