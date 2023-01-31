@@ -1,4 +1,5 @@
 const app = document.getElementById("app");
+
 function showBanner(){
     const p = document.createElement('p');
     p.innerText = "Welcome to My Terminal! Hello!";
@@ -6,13 +7,14 @@ function showBanner(){
     app.appendChild(p); 
     
     const pre = document.createElement('pre');
-    pre.innerText = `
-                                _                _ _   _               
-    ___ ___ ___ ___ _ _ ___ ___| |_    _____ ___| | |_| |_ ___ ___ ___ 
-   |_ -| .'|  _|  _| | | -_|_ -|   |  |     | .'| |  _|   | .'|   | -_|
-   |___|__,|_| |_|  \_/|___|___|_|_|  |_|_|_|__,|_|_| |_|_|__,|_|_|___|
+    pre.innerText = 
+`
+                            _                _ _   _               
+ ___ ___ ___ ___ _ _ ___ ___| |_    _____ ___| | |_| |_ ___ ___ ___ 
+|_ -| .'|  _|  _| | | -_|_ -|   |  |     | .'| |  _|   | .'|   | -_|
+|___|__,|_| |_|  \_/|___|___|_|_|  |_|_|_|__,|_|_| |_|_|__,|_|_|___|
                                                                        
-    `;
+`;
     pre.classList.add('terminal-text');
     app.appendChild(pre);
 
@@ -36,3 +38,8 @@ function initialTerminal(){
 }
 
 initialTerminal();  
+document.querySelector('.main-terminal').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        createInput();
+    }
+});
