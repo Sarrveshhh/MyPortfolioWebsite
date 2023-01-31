@@ -11,3 +11,8 @@ body{
 .header-text{
     color: #ef5b25;
 }
+
+
+input{
+    caret-color: rgb(0, 200, 0);
+  }
