@@ -40,6 +40,8 @@ function initialTerminal(){
 initialTerminal();  
 document.querySelector('.main-terminal').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
+        const input = document.getElementsByClassName('main-terminal');
+        input.value = "";
         createInput();
     }
 });
